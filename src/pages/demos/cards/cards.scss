@@ -1,0 +1,9 @@
+page-cards {
+  ion-card.cards-list-demo ion-card-header {
+    color: map-get($colors, primary);
+  }
+  .c-inline{
+    display: inline-block;
+    vertical-align: middle;
+  }
+}

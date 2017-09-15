@@ -7,7 +7,7 @@ import { NavController } from 'ionic-angular';
 })
 export class HomePage {
 
-  items:any = [
+  items:Array<{text:string, page:string}> = [
     {
       text: 'Action Sheets',
       page: 'ActionSheetsPage'
@@ -23,6 +23,26 @@ export class HomePage {
     {
       text: 'Buttons',
       page: 'ButtonsPage'
+    },
+    {
+      text: 'Cards',
+      page: 'CardsPage'
+    },
+    {
+      text: 'Checkbox',
+      page: 'CheckboxPage'
+    },
+    {
+      text: 'DateTime',
+      page: 'DatetimePage'
+    },
+    {
+      text: 'FABs',
+      page: 'FabsPage'
+    },
+    {
+      text: 'Gestures',
+      page: 'GesturesPage'
     }
   ];
 

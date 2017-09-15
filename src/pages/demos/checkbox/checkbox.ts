@@ -2,20 +2,20 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 /**
- * Generated class for the ComponentButtonPage page.
+ * Generated class for the CheckboxPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
  */
 
 @IonicPage({
-  segment: 'demos/buttons/component-buttons'
+  segment: 'demos/checkbox'
 })
 @Component({
-  selector: 'page-component-button',
-  templateUrl: 'component-button.html',
+  selector: 'page-checkbox',
+  templateUrl: 'checkbox.html',
 })
-export class ComponentButtonPage {
+export class CheckboxPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }

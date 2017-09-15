@@ -2,20 +2,20 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 /**
- * Generated class for the ComponentButtonPage page.
+ * Generated class for the CardSocialPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
  */
 
 @IonicPage({
-  segment: 'demos/buttons/component-buttons'
+  segment: 'demos/cards/social-cards'
 })
 @Component({
-  selector: 'page-component-button',
-  templateUrl: 'component-button.html',
+  selector: 'page-card-social',
+  templateUrl: 'card-social.html',
 })
-export class ComponentButtonPage {
+export class CardSocialPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }

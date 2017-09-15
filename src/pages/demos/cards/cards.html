@@ -1,0 +1,122 @@
+2<ion-header>
+
+  <ion-navbar>
+    <ion-title>Cards</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="cards-bg">
+
+  <h5>Basic Cards</h5>
+  <ion-card>
+    <ion-card-header>
+      Card Header
+    </ion-card-header>
+    <ion-card-content>
+      This is just your basic card with some text to boot. Like it?  Keep scrolling...
+    </ion-card-content>
+  </ion-card>
+
+  <h5>Lists In Cards</h5>
+  <ion-card>
+    <ion-card-header>
+      Explore Nearby
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <button ion-item>
+          <ion-icon name="cart" item-start></ion-icon>Shopping
+        </button>
+
+        <button ion-item>
+          <ion-icon name="medical" item-start></ion-icon>Hospital
+        </button>
+
+        <button ion-item>
+          <ion-icon name="cafe" item-start></ion-icon>Cafe
+        </button>
+
+        <button ion-item>
+          <ion-icon name="paw" item-start></ion-icon>Dog Park
+        </button>
+
+        <button ion-item>
+          <ion-icon name="beer" item-start></ion-icon>Pub
+        </button>
+
+        <button ion-item>
+          <ion-icon name="planet"></ion-icon>Space
+        </button>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+  <h5>Images In Cards</h5>
+  <ion-card>
+    <img src="assets/img/cards_01.png">
+
+    <ion-card-content>
+      <ion-card-title>Nine Inch Nails Live</ion-card-title>
+      <p>The most popular industrial group ever, and largely responsible for bringing the music to a mass audience.</p>
+    </ion-card-content>
+
+    <ion-row no-padding>
+      <ion-col>
+        <button ion-button clear small color="danger" icon-start>
+          <ion-icon name="star"></ion-icon>Favorite
+        </button>
+      </ion-col>
+      <ion-col text-center>
+        <button ion-button clear small color="danger" icon-start>
+          <ion-icon name="musical-notes"></ion-icon>Listen
+        </button>
+      </ion-col>
+      <ion-col text-right>
+        <button ion-button clear small color="danger" icon-start>
+          <ion-icon name="share-alt"></ion-icon>Share
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+
+  <ion-card>
+    <img src="assets/img/cards_02.png">
+
+    <ion-card-content>
+      <ion-card-title>Erykah Badu</ion-card-title>
+      <p>American singer-songwriter, record producer, activist, and actress, Badu's style is a prime example of neo-soul.</p>
+    </ion-card-content>
+
+    <ion-row no-padding>
+      <ion-col>
+        <button ion-button clear small color="danger" icon-start>
+          <ion-icon name="star"></ion-icon>Favorite
+        </button>
+      </ion-col>
+      <ion-col text-center>
+        <button ion-button clear small color="danger" icon-start>
+          <ion-icon name="musical-notes"></ion-icon>Listen
+        </button>
+      </ion-col>
+      <ion-col text-right>
+        <button ion-button clear small color="danger" icon-start>
+          <ion-icon name="share-alt"></ion-icon>Share
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+
+
+  <h5 class="c-inline">Background Images</h5>
+  <button ion-button clear icon-end [navPush]="'CardBackgroundImagePage'">
+    View<ion-icon name="arrow-forward"></ion-icon>
+  </button>
+
+  <h5>Advanced Cards</h5>
+  <div>
+    <button ion-button outline [navPush]="'CardSocialPage'">Social Cards</button>
+    <button ion-button outline [navPush]="'CardMapPage'">Map Cards</button>
+  </div>
+</ion-content>
