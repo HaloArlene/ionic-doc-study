@@ -43,6 +43,14 @@ export class HomePage {
     {
       text: 'Gestures',
       page: 'GesturesPage'
+    },
+    {
+      text: 'Grid',
+      page: 'GridPage'
+    },
+    {
+      text: 'Icons',
+      page: 'IconsPage'
     }
   ];
 
