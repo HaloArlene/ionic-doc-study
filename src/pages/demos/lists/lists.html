@@ -1,0 +1,72 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Lists</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <h4>Basic Lists</h4>
+  <ion-list>
+    <button ion-item *ngFor="let item of items" (click)="itemChosen(item)">{{item}}</button>
+  </ion-list>
+
+  <h4>List Dividers</h4>
+  <ion-item-group>
+    <ion-item-divider color="light">A</ion-item-divider>
+    <ion-item>Angola</ion-item>
+    <ion-item>Argentina</ion-item>
+    <ion-item>Armenia</ion-item>
+    <ion-item>Australia</ion-item>
+    <ion-item>Austria</ion-item>
+  </ion-item-group>
+
+  <ion-item-group>
+    <ion-item-divider color="secondary">B</ion-item-divider>
+    <ion-item>Bangladesh</ion-item>
+    <ion-item>Belarus</ion-item>
+    <ion-item>Belgium</ion-item>
+    <ion-item>Bhutan</ion-item>
+    <ion-item>Bolivia</ion-item>
+    <ion-item>Brazil</ion-item>
+  </ion-item-group>
+
+  <ion-item-group>
+    <ion-item-divider color="dark">C</ion-item-divider>
+    <ion-item>Cambodia</ion-item>
+    <ion-item>Cameroon</ion-item>
+    <ion-item>Canada</ion-item>
+    <ion-item>Chile</ion-item>
+    <ion-item>China</ion-item>
+    <ion-item>Colombia</ion-item>
+    <ion-item>Costa Rica</ion-item>
+    <ion-item>Cuba</ion-item>
+    <ion-item>Cyprus</ion-item>
+    <ion-item>Czech Republic</ion-item>
+  </ion-item-group>
+
+  <h4>List Headers</h4>
+  <ion-list>
+    <ion-list-header>Comedy</ion-list-header>
+    <ion-item>Airplane!</ion-item>
+    <ion-item>Caddyshack</ion-item>
+    <ion-item>Coming To America</ion-item>
+  </ion-list>
+  <ion-list>
+    <ion-list-header>Action</ion-list-header>
+    <ion-item>Terminator II</ion-item>
+    <ion-item>The Empire Strikes Back</ion-item>
+    <ion-item>Blade Runner</ion-item>
+  </ion-list>
+  <ion-list>
+    <ion-list-header>Horror</ion-list-header>
+    <ion-item>The Evil Dead</ion-item>
+    <ion-item>Poldergeist</ion-item>
+    <ion-item>Aliens</ion-item>
+  </ion-list>
+
+  <div padding>
+    <button ion-button block outline color="royal" [navPush]="'IconListPage'">Icon List</button>
+  </div>
+
+
+</ion-content>

@@ -51,6 +51,14 @@ export class HomePage {
     {
       text: 'Icons',
       page: 'IconsPage'
+    },
+    {
+      text: 'Inputs',
+      page: 'InputsPage'
+    },
+    {
+      text: 'Lists',
+      page: 'ListsPage'
     }
   ];
 
