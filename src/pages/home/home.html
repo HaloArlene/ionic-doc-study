@@ -4,10 +4,11 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content>
-  <ion-list>
-    <button ion-item *ngFor="let item of items" [navPush]="item.page">
-      {{ item.text }}
-    </button>
-  </ion-list>
+<ion-content padding text-center>
+  <h5>Welcome to my Ionic app.</h5>
+  <p>This app is built for Ionic learning.</p>
+  <button ion-button outline icon-end [navPush]="'DemosPage'">
+    View Demos
+    <ion-icon name="arrow-forward"></ion-icon>
+  </button>
 </ion-content>

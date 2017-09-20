@@ -8,7 +8,9 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
  * Ionic pages and navigation.
  */
 
-@IonicPage()
+@IonicPage({
+  segment: 'demos/lists/avatar-list'
+})
 @Component({
   selector: 'page-avatar-list',
   templateUrl: 'avatar-list.html',

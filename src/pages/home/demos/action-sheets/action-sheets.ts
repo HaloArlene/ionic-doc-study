@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import {ActionSheetController, IonicPage, NavController, NavParams, Platform} from 'ionic-angular';
-import {NativeServiceProvider} from "../../../providers/native-service/native-service";
+import {NativeServiceProvider} from "../../../../providers/native-service/native-service";
 
 /**
  * Generated class for the ActionSheetsPage page.

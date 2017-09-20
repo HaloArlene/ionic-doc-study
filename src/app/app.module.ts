@@ -11,6 +11,8 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { NativeServiceProvider } from '../providers/native-service/native-service';
+import {MenuFirstPage} from "../pages/home/demos/menus/menu-first/menu-first";
+import {MenuSecondPage} from "../pages/home/demos/menus/menu-second/menu-second";
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { NativeServiceProvider } from '../providers/native-service/native-servic
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    MenuFirstPage,
+    MenuSecondPage
   ],
   imports: [
     BrowserModule,
@@ -30,7 +34,9 @@ import { NativeServiceProvider } from '../providers/native-service/native-servic
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    MenuFirstPage,
+    MenuSecondPage
   ],
   providers: [
     StatusBar,

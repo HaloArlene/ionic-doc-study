@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle icon-only>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Page One</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h3>Ionic menu starter</h3>
+  <button ion-button icon-start [navPush]="'DemosPage'">
+    <ion-icon name="arrow-back"></ion-icon>
+    Go Back
+  </button>
+  <button ion-button color="secondary" menuToggle>Menu Toggle</button>
+</ion-content>

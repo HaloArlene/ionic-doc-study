@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import {NativeServiceProvider} from "../../../providers/native-service/native-service";
+import {NativeServiceProvider} from "../../../../providers/native-service/native-service";
 
 @IonicPage({
   segment: 'demos/lists'
@@ -29,6 +29,25 @@ export class ListsPage {
     'Fallout',
     'GTA',
     'Halo'
+  ];
+
+  listDemos:Array<{text:string, page:string}> = [
+    {
+      text: 'Icon List',
+      page: 'IconListPage'
+    },{
+      text: 'Avatar List',
+      page: 'AvatarListPage'
+    },{
+      text: 'Multi-line List',
+      page: 'MultilineListPage'
+    },{
+      text: 'Sliding List',
+      page: 'SlidingListPage'
+    },{
+      text: 'Thumbnail List',
+      page: 'ThumbnailListPage'
+    }
   ];
 
   constructor(public navCtrl: NavController,

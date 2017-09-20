@@ -64,12 +64,10 @@
     <ion-item>Aliens</ion-item>
   </ion-list>
 
-  <div padding>
-    <button ion-button block outline color="royal" [navPush]="'IconListPage'">Icon List</button>
-  </div>
-  <div padding>
-    <button ion-button block outline color="royal" [navPush]="'AvatarListPage'">Avatar List</button>
-  </div>
+  <ion-buttons padding>
+    <button *ngFor="let demo of listDemos" ion-button block outline
+            color="royal" [navPush]="demo.page">{{demo.text}}</button>
+  </ion-buttons>
 
 
 </ion-content>
