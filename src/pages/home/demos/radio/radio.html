@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Radios</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <form (submit)="doSubmit($event)" [formGroup]="langForm">
+    <ion-list radio-group formControlName="langs">
+      <ion-list-header>Language</ion-list-header>
+
+      <ion-item *ngFor="let lang of languages">
+        <ion-label>{{lang.name}}</ion-label>
+        <ion-radio [value]="lang.value"></ion-radio>
+      </ion-item>
+
+    </ion-list>
+    <div padding>
+      <button ion-button block type="submit">Confirm</button>
+    </div>
+  </form>
+</ion-content>

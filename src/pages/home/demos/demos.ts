@@ -77,6 +77,14 @@ export class DemosPage {
     {
       text: 'Navigation',
       page: 'NavigationPage'
+    },
+    {
+      text: 'Popovers',
+      page: 'PopoversPage'
+    },
+    {
+      text: 'Radio',
+      page: 'RadioPage'
     }
   ];
 
