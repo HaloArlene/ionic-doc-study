@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Segment</ion-title>
+  </ion-navbar>
+
+  <ion-toolbar no-border-top>
+    <ion-segment [(ngModel)]="pet">
+      <ion-segment-button value="puppies">Puppies</ion-segment-button>
+      <ion-segment-button value="kittens">Kittens</ion-segment-button>
+      <ion-segment-button value="ducklings">Ducklings</ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div [ngSwitch]="pet">
+    <ion-list *ngSwitchCase="'puppies'">
+      <ion-item *ngFor="let pup of items.puppies">
+        <ion-thumbnail item-start>
+          <img [src]="'assets/img/' + pup.icon">
+        </ion-thumbnail>
+        <h2>{{pup.name}}</h2>
+      </ion-item>
+    </ion-list>
+    <ion-list *ngSwitchCase="'kittens'">
+      <ion-item *ngFor="let kit of items.kittens">
+        <ion-thumbnail item-start>
+          <img [src]="'assets/img/' + kit.icon">
+        </ion-thumbnail>
+        <h2>{{kit.name}}</h2>
+      </ion-item>
+    </ion-list>
+    <ion-list *ngSwitchCase="'ducklings'">
+      <ion-item *ngFor="let duc of items.ducklings">
+        <ion-thumbnail item-start>
+          <img [src]="'assets/img/' + duc.icon">
+        </ion-thumbnail>
+        <h2>{{duc.name}}</h2>
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>
