@@ -26,7 +26,9 @@ import {MenuSecondPage} from "../pages/home/demos/menus/menu-second/menu-second"
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp, {
+      tabsHideOnSubPages: true
+    })
   ],
   bootstrap: [IonicApp],
   entryComponents: [

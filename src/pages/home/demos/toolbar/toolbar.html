@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Toolbar</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <button ion-button block outline icon-end [navPush]="'ToolbarColorsPage'">
+    Changing the Color
+    <ion-icon name="arrow-forward"></ion-icon>
+  </button>
+  <button ion-button block outline icon-end [navPush]="'ToolbarButtonsPage'">
+    Buttons in Toolbars
+    <ion-icon name="arrow-forward"></ion-icon>
+  </button>
+  <button ion-button block outline icon-end [navPush]="'ToolbarSegmentPage'">
+    Segment in Toolbars
+    <ion-icon name="arrow-forward"></ion-icon>
+  </button>
+  <button ion-button block outline icon-end [navPush]="'ToolbarSearchbarPage'">
+    Searchbar in Toolbars
+    <ion-icon name="arrow-forward"></ion-icon>
+  </button>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-title>Footer Toolbar</ion-title>
+  </ion-toolbar>
+</ion-footer>

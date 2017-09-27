@@ -82,6 +82,15 @@ export class DemosPage {
     },{
       text: 'Slides',
       page: 'SlidesPage'
+    },{
+      text: 'Toast',
+      page: 'ToastPage'
+    },{
+      text: 'Toggles',
+      page: 'TogglesPage'
+    },{
+      text: 'Toolbar',
+      page: 'ToolbarPage'
     }
   ];
 

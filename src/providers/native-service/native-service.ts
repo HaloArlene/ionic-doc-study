@@ -12,7 +12,7 @@ export class NativeServiceProvider {
 
   constructor(private toastCtrl: ToastController) {}
 
-  showToast(message:string, duration:number = 1000, callBack?:Function, position:string = 'middle'):void {
+  showToast(message:string, duration:number = 1000, callBack?:Function, position:string = 'bottom'):void {
     let toast = this.toastCtrl.create({
       message: message,
       duration: duration,
