@@ -6,6 +6,26 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-
+<ion-content>
+  <ion-list>
+    <ion-list-header>About This Project</ion-list-header>
+    <ion-item *ngFor="let detail of details" color="light">
+      <ion-label>{{detail.name}}</ion-label>
+      <ion-note item-end>{{detail.value}}</ion-note>
+    </ion-item>
+  </ion-list>
+  <ion-list>
+    <ion-list-header>Dependencies</ion-list-header>
+    <ion-item *ngFor="let dep of dependencies" color="light">
+      <ion-label>{{dep.name}}</ion-label>
+      <ion-note item-end>{{dep.value}}</ion-note>
+    </ion-item>
+  </ion-list>
+  <ion-list>
+    <ion-list-header>Development Dependencies</ion-list-header>
+    <ion-item *ngFor="let devDep of devDependencies" color="light">
+      <ion-label>{{devDep.name}}</ion-label>
+      <ion-note item-end>{{devDep.value}}</ion-note>
+    </ion-item>
+  </ion-list>
 </ion-content>
