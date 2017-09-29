@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {ToastController} from "ionic-angular";
+import {Loading, LoadingController, ToastController} from "ionic-angular";
 
 /*
   Generated class for the NativeServiceProvider provider.
@@ -9,8 +9,10 @@ import {ToastController} from "ionic-angular";
 */
 @Injectable()
 export class NativeServiceProvider {
+  loading: Loading;
 
-  constructor(private toastCtrl: ToastController) {}
+  constructor(private toastCtrl: ToastController,
+              private loadingCtrl: LoadingController) {}
 
   showToast(message:string, duration:number = 1000, callBack?:Function, position:string = 'bottom'):void {
     let toast = this.toastCtrl.create({
@@ -22,6 +24,25 @@ export class NativeServiceProvider {
     toast.present();
     toast.onDidDismiss(() => {
       if(callBack) callBack();
+    });
+  }
+
+  showLoading(content: string = 'Loading...') {
+    this.loading = this.loadingCtrl.create({
+      content: content,
+      spinner: 'bubbles'
+    });
+    this.loading.present();
+  }
+
+  hideLoading(message?: string) {
+    this.loading.dismiss({}, '', {
+      animate: true,
+      animation: 'slide',
+      duration: 0.5
+    });
+    this.loading.onDidDismiss(() => {
+      if(message) this.showToast(message, 1000);
     });
   }
 }

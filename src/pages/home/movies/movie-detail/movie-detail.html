@@ -1,0 +1,65 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Movie</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngIf="movie">
+    <img [src]="movie.images.large">
+    <ion-card-header no-padding>
+      <ion-card-title ion-item>
+        {{movie.title}}
+        <ion-badge item-end color="royal">{{movie.rating.average}}</ion-badge>
+      </ion-card-title>
+      <ion-list>
+        <ion-item icon-start>
+          <ion-icon color="energized" name="star"></ion-icon>星数
+          <ion-badge color="secondary" item-end>{{movie.rating.stars}}</ion-badge>
+        </ion-item>
+        <ion-item icon-start>
+          <ion-icon color="danger" name="heart"></ion-icon>收藏人数
+          <ion-badge color="secondary" item-end>{{movie.collect_count}}</ion-badge>
+        </ion-item>
+        <ion-item icon-start>
+          <ion-icon color="dark" name="happy"></ion-icon>评分人数
+          <ion-badge color="secondary" item-end>{{movie.ratings_count}}</ion-badge>
+        </ion-item>
+        <ion-item icon-start>
+          <ion-icon color="royal" name="people"></ion-icon>想看人数
+          <ion-badge color="secondary" item-end>{{movie.wish_count}}</ion-badge>
+        </ion-item>
+      </ion-list>
+    </ion-card-header>
+    <div ion-item class="m-detail">
+      <h3><ion-badge color="royal">{{movie.original_title}}</ion-badge></h3>
+      <p>又名：<ion-badge color="light" *ngFor="let a of movie.aka">{{a}}</ion-badge></p>
+      <p>上映年份：<ion-badge color="light">{{movie.year}}</ion-badge></p>
+      <p>制片国家/地区：<ion-badge color="light" *ngFor="let country of movie.countries">{{country}}</ion-badge></p>
+      <p>类型：<ion-badge color="light" *ngFor="let gen of movie.genres">{{gen}}</ion-badge></p>
+      <p>导演：<ion-badge color="light" *ngFor="let dir of movie.directors">{{dir.name}}</ion-badge></p>
+      <p>主演：<ion-badge color="light" *ngFor="let cast of movie.casts">{{cast.name}}</ion-badge></p>
+    </div>
+    <div padding>
+      <h3><ion-badge color="royal">剧情简介</ion-badge></h3>
+      <p>{{movie.summary}}</p>
+    </div>
+    <div ion-item class="m-person">
+      <h3><ion-badge color="royal">影人</ion-badge></h3>
+      <div ion-item *ngFor="let dir of movie.directors">
+        <ion-thumbnail item-start>
+          <img [src]="dir.avatars.small">
+        </ion-thumbnail>
+        <h2>{{dir.name}}</h2>
+        <ion-badge item-end color="dark">导演</ion-badge>
+      </div>
+      <div ion-item *ngFor="let cast of movie.casts">
+        <ion-thumbnail item-start>
+          <img [src]="cast.avatars.small">
+        </ion-thumbnail>
+        <h2>{{cast.name}}</h2>
+        <ion-badge color="dark" item-end>主演</ion-badge>
+      </div>
+    </div>
+  </ion-card>
+</ion-content>

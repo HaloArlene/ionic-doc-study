@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Movies</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-list-header>Movies Top 250</ion-list-header>
+    <button ion-item *ngFor="let movie of movies" (click)="showDetail(movie.id)">
+      <ion-thumbnail item-start>
+        <img [src]="movie.images.small">
+      </ion-thumbnail>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <h2>{{movie.title}}</h2>
+          </ion-col>
+          <ion-col text-end>
+            <ion-note item-end color="primary">{{movie.rating.average}}</ion-note>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col><p>{{movie.original_title}}</p></ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>{{movie.year}}</ion-col>
+          <ion-col>
+            <ion-badge *ngFor="let gen of movie.genres" color="light">{{gen}}</ion-badge>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col icon-start>
+            <ion-icon name="star" color="energized"></ion-icon>Stars
+          </ion-col>
+          <ion-col>
+            <ion-badge>{{movie.rating.stars}}</ion-badge>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </button>
+  </ion-list>
+  <ion-infinite-scroll (ionInfinite)="loadMore($event)">
+    <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Loading..."></ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</ion-content>

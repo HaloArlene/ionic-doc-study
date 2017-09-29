@@ -13,6 +13,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { NativeServiceProvider } from '../providers/native-service/native-service';
 import {MenuFirstPage} from "../pages/home/demos/menus/menu-first/menu-first";
 import {MenuSecondPage} from "../pages/home/demos/menus/menu-second/menu-second";
+import { HttpServiceProvider } from '../providers/http-service/http-service';
+import { HttpModule } from "@angular/http";
 
 @NgModule({
   declarations: [
@@ -26,6 +28,7 @@ import {MenuSecondPage} from "../pages/home/demos/menus/menu-second/menu-second"
   ],
   imports: [
     BrowserModule,
+    HttpModule,
     IonicModule.forRoot(MyApp, {
       tabsHideOnSubPages: true
     })
@@ -44,7 +47,9 @@ import {MenuSecondPage} from "../pages/home/demos/menus/menu-second/menu-second"
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    NativeServiceProvider
+    NativeServiceProvider,
+    HttpServiceProvider
+
   ]
 })
 export class AppModule {}

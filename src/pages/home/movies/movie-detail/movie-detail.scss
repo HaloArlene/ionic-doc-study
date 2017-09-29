@@ -1,0 +1,19 @@
+page-movie-detail {
+  .m-detail{
+    p{
+      line-height: 24px;
+      overflow: auto;
+      white-space: normal;
+    }
+  }
+  .m-person{
+    div{
+      padding-left: 0;
+    }
+    img{
+      width: 50px;
+      height: auto;
+      display: inline-block;
+    }
+  }
+}
